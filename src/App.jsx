@@ -1,4 +1,5 @@
 import "./App.css";
+import GigaTitle from "./components/GigaTitle/GigaTitle";
 import Header from "./components/Header/Header";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <GigaTitle>Fullstack developer</GigaTitle>
       {/* <div>
         {posts.map((item, id) => {
           const base64String = btoa(
