@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+.Header {
+  // color: green;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    .explore {
+      background-color: #fff;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      &:hover {
+        background-color: #e74d4d;
+        > a {
+          color: #fff;
+        }
+      }
+      a {
+        color: #000;
+        font-size: 32px;
+        transition: 0.2s;
+      }
+    }
+  }
+  .info {
+    p {
+      font-size: 28px;
+      font-family: "JetBrains Mono", monospace;
+      line-height: 2;
+      padding: 50px 50px 0px 200px;
+      max-width: 80vw;
+      span {
+        font-family: "JetBrains Mono", monospace;
+      }
+      .orange {
+        color: #ffbc6d;
+      }
+      .blue {
+        color: #65edff;
+      }
+      .darkgreen {
+        color: #68ab49;
+      }
+      .green {
+        color: #d6ff80;
+      }
+      .red {
+        color: #e84f4f;
+      }
+      .pink {
+        color: #e065ff;
+      }
+      .purple {
+        color: #6d60fe;
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .Header {
+    .info {
+      nav {
+        padding: 20px 50px 20px 100px;
+
+        a {
+          font-size: 20px;
+        }
+      }
+      p {
+        padding: 20px 20px 0px 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .Header {
+    flex-direction: column;
+    .info {
+      nav {
+        margin-right: 100px;
+      }
+    }
+    .card {
+      .explore {
+        padding: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+    .Header {
+      flex-direction: column;
+      .info {
+        nav{
+            margin-right: 50px;
+            padding: 10px 20px 10px 40px;
+            a{
+                font-size: 14px;
+            }
+        }
+        p{
+            font-size: 20px;
+            padding: 10px 0px 0px 40px;
+    
+        }
+    }
+    }
+  }
