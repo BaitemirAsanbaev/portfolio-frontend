@@ -32,9 +32,10 @@ export default function Gallery() {
     >
       {posts.map((post, index) => (
         <SwiperSlide key={index}>
-          <img className="gallery-image" src={decode(post.image)} alt={post.text} height={500}/>
+          <img className="gallery-image" src={decode(post.image)} alt={post.text}/>
+          <span className='gallery-text'>{post.text}</span>
         </SwiperSlide>
-      ))}
+      ))} 
     </Swiper>
   );
 }

@@ -7,7 +7,23 @@
   max-width: 1000px;
   margin: 0 auto;
 }
-
+.gallery-text{
+  font-size: 40px;
+  position: relative;
+  z-index: 4;
+  top: 30px;
+  right: 440px;
+  opacity: 0;
+  transition: .3 ease;
+}
+.swiper-slide-active:hover{
+  .gallery-image{
+    filter: brightness(.6);
+  }
+  .gallery-text{
+    opacity: 1;
+  }
+}
 .swiper-slide-active .gallery-image {
   filter: brightness(1); /* Main slide has full brightness */
   transform: scale(1.2); /* Main slide is slightly larger */
@@ -17,4 +33,25 @@
 .swiper-slide{
   display: flex;
   justify-content: center;
+}
+
+@media (max-width:1750px) {
+  .gallery-image{
+      height: 500px;
+  }
+}
+@media (max-width:1300px) {
+  .gallery-image{
+      height: 300px;
+  }
+}
+@media (max-width:900px) {
+  .gallery-image{
+      height: 200px;
+}
+}
+@media (max-width:600px) {
+  .GigaTgallery-imageitle{
+      height: 100px;
+  }
 }
