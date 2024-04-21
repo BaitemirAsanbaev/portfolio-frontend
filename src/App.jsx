@@ -17,34 +17,8 @@ function App() {
       <Header/>
       <GigaTitle>Fullstack developer</GigaTitle>
       <Gallery/>
-      {/* <div>
-        {posts.map((item, id) => {
-          const base64String = btoa(
-            String.fromCharCode.apply(null, item.image.buffer.data)
-          );
+      <GigaTitle triple>Projects</GigaTitle>
 
-          return (
-            <div key={id}>
-              <img
-                src={`data:${item.image.encoding};base64,${base64String}`}
-                alt="img"
-                width={300}
-              />
-              <p>{item.text}</p>
-              <p>{item.description}</p>
-              <a href={item.githubLink}>github</a>
-              <br />
-              <a href={item.siteLink}>site</a>
-              <div>
-                {item.tags.map((item) => {
-                  return <small>{item}</small>;
-                })}
-              </div>
-              <p>{item.text}</p>
-            </div>
-          );
-        })}
-      </div> */}
     </div>
   );
 }
