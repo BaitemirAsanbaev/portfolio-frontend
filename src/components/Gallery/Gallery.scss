@@ -1,0 +1,20 @@
+.gallery-image {
+  filter: brightness(0.5); /* Adjust brightness for less brightness */
+  transform: scale(0.8);
+  transition: 0.3s ease; /* Add smooth transition effect */
+  z-index: 2;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.swiper-slide-active .gallery-image {
+  filter: brightness(1); /* Main slide has full brightness */
+  transform: scale(1.2); /* Main slide is slightly larger */
+  z-index: 3;
+  position: relative;
+}
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+}
