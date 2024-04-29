@@ -1,10 +1,25 @@
+.slide-item{
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-cont{
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
 .gallery-image {
   filter: brightness(0.5); /* Adjust brightness for less brightness */
   transform: scale(0.8);
+  transform-origin: center;
   transition: 0.3s ease; /* Add smooth transition effect */
   z-index: 2;
   position: relative;
-  max-width: 1000px;
+  left: 200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .gallery-text{
@@ -14,6 +29,7 @@
   top: 30px;
   right: 440px;
   opacity: 0;
+  text-wrap: nowrap;
   transition: .3 ease;
 }
 .swiper-slide-active:hover{
@@ -51,7 +67,7 @@
 }
 }
 @media (max-width:600px) {
-  .GigaTgallery-imageitle{
+  .gallery-image{
       height: 100px;
   }
 }

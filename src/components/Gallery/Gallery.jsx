@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow'; // Import Swiper's coverflow effect style
-import { getPosts } from '../../services/GalleryService';
-import { decode } from '../../helpers/base64decoder';
-import './Gallery.scss'; // Import your custom CSS for styling
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import { getPosts } from "../../services/GalleryService";
+import "./Gallery.scss";
+import { api } from "../../api";
 
 export default function Gallery() {
   const [posts, setPosts] = useState([]);
@@ -26,16 +26,27 @@ export default function Gallery() {
       spaceBetween={50}
       slidesPerView={3}
       centeredSlides={true}
-      effect={'coverflow'} 
-      autoplay={{delay:30}}
-      coverflowEffect={{ rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: false }} // Customize coverflow effect
+      effect={"coverflow"}
+      autoplay={{ delay: 5 }}
+      loop={true}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      }}
     >
       {posts.map((post, index) => (
-        <SwiperSlide key={index}>
-          <img className="gallery-image" src={decode(post.image)} alt={post.text}/>
-          <span className='gallery-text'>{post.text}</span>
+        <SwiperSlide key={index} className="slide-item">
+          <img
+            className="gallery-image"
+            src={api + "/" + post.image}
+            alt={post.text}
+          />
+          <span className="gallery-text">{post.text}</span>
         </SwiperSlide>
-      ))} 
+      ))}
     </Swiper>
   );
 }

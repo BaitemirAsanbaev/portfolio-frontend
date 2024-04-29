@@ -1,31 +1,34 @@
-.GigaTitle{
-    font-size: 200px;
-    display: flex;
-    justify-content: center;
-    margin: 100px 0;
-    overflow: visible;
-    white-space: nowrap;
-    transition: .3s;
+.GigaTitleCont {
+  overflow: hidden;
+  
+}
+.GigaTitle {
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  white-space: nowrap;
+  transition: 0.3s;
 }
 
-@media (max-width:1750px) {
-    .GigaTitle{
-        font-size: 150px;
-    }
+@media (max-width: 1750px) {
+  .GigaTitle {
+    font-size: 150px;
+  }
 }
-@media (max-width:1300px) {
-    .GigaTitle{
-        font-size: 100px;
-    }
+@media (max-width: 1300px) {
+  .GigaTitle {
+    font-size: 100px;
+  }
 }
-@media (max-width:900px) {
-    .GigaTitle{
-        font-size: 70px;
+@media (max-width: 900px) {
+  .GigaTitle {
+    font-size: 70px;
     margin: 50px 0;
+  }
 }
-}
-@media (max-width:600px) {
-    .GigaTitle{
-        font-size: 40px;
-    }
+@media (max-width: 600px) {
+  .GigaTitle {
+    font-size: 40px;
+  }
 }

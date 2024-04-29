@@ -2,6 +2,7 @@ import "./App.css";
 import Gallery from "./components/Gallery/Gallery";
 import GigaTitle from "./components/GigaTitle/GigaTitle";
 import Header from "./components/Header/Header";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   // const [posts, setPosts] = useState([]);
@@ -18,7 +19,7 @@ function App() {
       <GigaTitle>Fullstack developer</GigaTitle>
       <Gallery/>
       <GigaTitle triple>Projects</GigaTitle>
-
+      <Projects/>
     </div>
   );
 }
