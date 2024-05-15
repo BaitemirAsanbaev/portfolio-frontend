@@ -1,4 +1,5 @@
 import "./App.css";
+import Certificates from "./components/Certificates/Certificates";
 import Gallery from "./components/Gallery/Gallery";
 import GigaTitle from "./components/GigaTitle/GigaTitle";
 import Header from "./components/Header/Header";
@@ -20,6 +21,8 @@ function App() {
       <Gallery/>
       <GigaTitle triple>Projects</GigaTitle>
       <Projects/>
+      <GigaTitle triple>Certificates</GigaTitle>
+      <Certificates/>
     </div>
   );
 }

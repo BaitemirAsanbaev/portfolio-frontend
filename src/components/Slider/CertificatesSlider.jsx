@@ -3,15 +3,12 @@ import "./Slider.css"; // Import CSS for styling
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { api } from "../../api";
 
-const SliderComp = ({ posts }) => {
+
+const CertificatesSlider = ({ data }) => {
   const settings = {
-    className: "center",
-    centerMode: true,
     infinite: true,
-    centerOpacity:'.6',
-    slidesToShow: 1,
+    slidesToShow: 3,
     autoplay:true,
     autoplaySpeed:0,
     cssEase:'linear',
@@ -22,27 +19,22 @@ const SliderComp = ({ posts }) => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {posts.map((post, index) => {
-          const imageUrl = `${api}/${post.image}`;
+        {data.map((item, index) => {
           return (
             <div key={index}
-            className="slide"
+            className="certificate"
             >
               <div
-              className="image_div"
+              className="cert"
                 style={{
-                  backgroundImage: `url(${imageUrl})`,
-                  backgroundSize: "cover",
+                  backgroundImage: `url(${item})`,
+                  backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",  
                 }}
               >
                 
               </div>
-              <div className="text_div">
-
-                {post.text}
-                </div>
             </div>
           );
         })}
@@ -51,4 +43,4 @@ const SliderComp = ({ posts }) => {
   );
 };
 
-export default SliderComp;
+export default CertificatesSlider;
