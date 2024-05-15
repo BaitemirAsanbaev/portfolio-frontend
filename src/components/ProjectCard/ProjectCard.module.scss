@@ -1,7 +1,7 @@
 .ProjectCard{
     padding: 30px 40px;
     margin:20px;
-    flex: 0 0 40%;
+    flex: 1 0 40%;
     .image{
         width: 100%;
         height: 250px;
@@ -75,6 +75,34 @@
             }
             
 
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .ProjectCard{
+        .info{height:170px!important;
+            .left{
+                h2{
+                    font-size: 14px!important;
+                }
+                p{
+                    font-size: 10px!important   ;
+                }
+            }
+            .right{
+                
+                .tag{
+                    font-size: 10px!important;
+
+                }
+                .links{
+                    margin: 0!important;
+                    a{
+                        font-size: 10px!important;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,7 +1,6 @@
 import { api } from "../../api";
 import classes from "./ProjectCard.module.scss";
 export default function ProjectCard({ data }) {
-  console.log(data);
   return (
     <div
       className={classes.ProjectCard}
