@@ -13,7 +13,7 @@ const CertificatesSlider = ({ data }) => {
     autoplaySpeed:0,
     cssEase:'linear',
     speed: 5000,
-    arrows:true
+    arrows:false
   };
 
   return (

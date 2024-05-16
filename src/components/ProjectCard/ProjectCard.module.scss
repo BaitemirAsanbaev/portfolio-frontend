@@ -1,108 +1,104 @@
-.ProjectCard{
-    padding: 30px 40px;
-    margin:20px;
-    flex: 1 0 40%;
-    .image{
-        width: 100%;
-        height: 250px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        transition: .4s ease;
+.ProjectCard {
+  padding: 30px 40px;
+  margin: 20px;
+  flex: 1 0 40%;
+  .image {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: 0.4s ease;
+  }
+  .info {
+    height: 0;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  &:hover {
+    .image { 
+      height: 0;
     }
-    .info{
-        height: 0;
-        opacity: 0;
-        transition: .4s;
-    }
-    &:hover{
-        .image{
-            height: 0;
+    .info {
+      height: 350px;
+      opacity: 1;
+      background-color: #121212;
+      border-radius: 10px;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 50%;
+        h2 {
+          margin: 20px 0;
+          font-size: 32px;
         }
-        .info{
-            height: 250px;
-            opacity: 1;
-            background-color: #121212;
+        p {
+          padding: 0 20px;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        // padding: 20px;
+        flex: 0 0 50%;
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 230px;
+          margin: 0 auto;
+          .tag {
+            flex: 0 0 40%;
+            background-color: grey;
+            padding: 5px 10px;
+            margin: 5px;
             border-radius: 10px;
-            padding: 20px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            .left{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                flex: 0 0 50%;
-                h2{
-                    margin: 20px 0;
-                    font-size: 32px;
-                }
-                p{
-                padding: 0 20px;
-                }
-            }
-            .right{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
-                // padding: 20px;
-                flex: 0 0 50%;
-                .tags{
-                    display: flex;
-                    flex-wrap: wrap;
-                    max-width: 230px;
-                    margin: 0 auto;
-                    .tag{
-                        flex:0 0 40%;
-                        background-color: grey;
-                        padding: 5px 10px;
-                        margin: 5px;
-                        border-radius: 10px;
-                        font-size: 14px;
-                        text-align: center;
-
-                    }
-                }
-                .links{
-                    margin-top: 20px;
-                    a{
-                        margin: 10px;
-                        border-radius: 10px;
-                        padding: 5px 10px;
-                    }
-                }
-            }
-            
-
+            font-size: 14px;
+            text-align: center;
+          }
         }
+        .links {
+          margin-top: 20px;
+          a {
+            margin: 10px;
+            border-radius: 10px;
+            padding: 5px 10px;
+          }
+        }
+      }
     }
+  }
 }
 
-@media (max-width:500px) {
-    .ProjectCard{
-        .info{height:170px!important;
-            .left{
-                h2{
-                    font-size: 14px!important;
-                }
-                p{
-                    font-size: 10px!important   ;
-                }
-            }
-            .right{
-                
-                .tag{
-                    font-size: 10px!important;
-
-                }
-                .links{
-                    margin: 0!important;
-                    a{
-                        font-size: 10px!important;
-                    }
-                }
-            }
+@media (max-width: 500px) {
+  .ProjectCard {
+    .info {
+      height: 170px !important;
+      .left {
+        h2 {
+          font-size: 14px !important;
         }
+        p {
+          font-size: 10px !important   ;
+        }
+      }
+      .right {
+        .tag {
+          font-size: 10px !important;
+        }
+        .links {
+          margin: 0 !important;
+          a {
+            font-size: 10px !important;
+          }
+        }
+      }
     }
+  }
 }

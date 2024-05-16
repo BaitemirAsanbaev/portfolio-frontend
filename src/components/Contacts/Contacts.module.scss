@@ -1,0 +1,53 @@
+.Contacts{
+    display: flex;
+    width: 70%;
+    margin: 150px 0;
+    padding: 30px 0;
+    align-self: flex-end;
+    background-color: #5B5B5B;
+    justify-content: flex-end;
+    a{
+        margin: 0 30px;
+        font-size: 32px
+    }
+}
+
+@media (max-width:1000px) {
+    .Contacts{
+        width: 90%;
+        a{
+            font-size: 20px;
+            margin: 0 20px;
+        }
+    }
+}
+@media (max-width:700px) {
+    .Contacts{
+        width: 80%;
+        padding: 20px 0;
+        a{
+            font-size: 16px;
+            margin: 0 10px;
+        }
+    }
+}
+@media (max-width:550px) {
+    .Contacts{
+        width: 80%;
+        padding: 10px 0;
+        a{
+            font-size: 12px;
+            margin: 0 10px;
+        }
+    }
+}
+@media (max-width:400px) {
+    .Contacts{
+        width: 100%;
+        padding: 10px 0;
+        a{
+            font-size: 10px;
+            margin: 0 10px;
+        }
+    }
+}

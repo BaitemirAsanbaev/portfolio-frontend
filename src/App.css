@@ -7,10 +7,15 @@
     font-family: "Josefin Sans", sans-serif;
     scroll-behavior: smooth;
     color: #fff;
+    transition: .5s;
 }
 body{
     background-color: #121212 ;
 }
 a{
     text-decoration: none;   
+}
+.App{
+    display: flex;
+    flex-direction: column;
 }
