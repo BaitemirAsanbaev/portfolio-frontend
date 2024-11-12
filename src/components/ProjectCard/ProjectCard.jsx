@@ -10,7 +10,7 @@ export default function ProjectCard({ data }) {
     >
       <div
         className={classes.image}
-        style={{ backgroundImage: `url(${api + "/" + data.image})` }}
+        style={{ backgroundImage: `url(http://localhost:5000/${data.image})` }}
       ></div>
       <div className={classes.info}>
         <div className={classes.left}>

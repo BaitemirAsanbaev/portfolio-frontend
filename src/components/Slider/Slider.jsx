@@ -23,7 +23,7 @@ const SliderComp = ({ posts }) => {
     <div className="slider-container">
       <Slider {...settings}>
         {posts.map((post, index) => {
-          const imageUrl = `${api}/${post.image}`;
+          const imageUrl = `http://localhost:5000/${post.image}`;
           return (
             <div key={index}
             className="slide"
